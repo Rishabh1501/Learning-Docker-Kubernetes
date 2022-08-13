@@ -1,0 +1,16 @@
+# version of docker compose
+version: '3'
+
+# which images to use
+services:
+  #name of service
+  mymongo:
+    #image to download 
+    image: "mongo"
+
+  mynode:
+    #build custom image 
+    build: .
+    ports:
+      - "8000:8000"
+     
