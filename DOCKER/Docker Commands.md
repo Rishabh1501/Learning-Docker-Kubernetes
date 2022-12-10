@@ -1,6 +1,9 @@
 # DOCKER COMMANDS
 ***
 ***
+>[!Important] COMMAND TO CHECK DATA USAGE BY EACH FILE
+>`docker run --rm imagename du -k /`
+***
 - *docker ps*
 This command is used to see the running containers.
 OPTIONS-
@@ -21,6 +24,8 @@ OPTIONS-
 - -p : used to create port to port connections between container and the host. USAGE: *-p <host_port> : <container_port>*
 - -d : detaches the container from the terminal.
 - -v : Attaches volume, used to map files between docker and host, in simple terms you don't have to run the build command every time you make a change. USAGE: *-v <location_in_host_machine> : <location_inside_container>*
+- -e : It is used to attach environment variables. USAGE: *-e <env_name>*
+- --env-file : It is used to provide the path of the env file in which all of your environment variables are present.
 ***
 - *docker pull <image_name>*
 This command is used to pull and image from the docker hub.
